@@ -52,6 +52,9 @@ exports.getMessage = function (data, mutedFP, userIdManager, profile, messages) 
     videoContainer.append(video).append(convertButton);
     li.append(videoContainer).append(p).append(actions);
     messages.append(li);
+    if (document.hidden){
+      video.pause();
+    }
     p.append(time);
 
     var children = messages.find('li');
